@@ -2,6 +2,11 @@ import "./Header.css";
 import logo from "./assets/logo.svg";
 
 function Header() {
+    const handleLocateUs = () => {
+        const mapUrl = "https://www.google.com/maps/d/viewer?mid=1mu41tfgQQsUP20gnHoG9tpQmWUc-qBM&usp=sharing";
+        window.open(mapUrl, '_blank', 'noopener,noreferrer');
+    };
+
     return (
         <header className="site-header container">
 
@@ -15,7 +20,7 @@ function Header() {
                 <a href="#contacts">Contacts</a>
             </nav>
 
-            <button className="locate-btn">Locate us</button>
+            <button className="locate-btn" onClick={handleLocateUs}>Locate us</button>
 
         </header>
     );

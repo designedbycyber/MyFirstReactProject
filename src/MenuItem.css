@@ -3,17 +3,17 @@
 }
 
 .menu-row {
-    display:flex;
+    display: flex;
     align-items: baseline;
     gap: 10px;
     width: 100%;
 }
 
 .menu-name {
-flex-shrink: 0;
-font-family: "Jost", sans-serif;
-font-size: 18px
-color: #1B2A32;
+    flex-shrink: 0;
+    font-family: "Jost", sans-serif;
+    font-size: 18px;
+    color: #1B2A32;
 }
 
 .menu-dots {
@@ -32,4 +32,3 @@ color: #1B2A32;
     width: 70px;
     text-align: left;
 }
-
