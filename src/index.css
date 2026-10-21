@@ -1,0 +1,58 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  background-color: #F4F1EA;
+  color: #1B2A32;
+  font-family: "Jost", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: 18px;
+  padding: 0px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Fraunces", Georgia, serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+h2 {
+  text-align: center
+}
+
+h3 {
+  font-family: "Jost";
+}
+
+.container {
+  width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+
+body::before {
+  content: '';
+  position: absolute;
+  top: 200px;
+  left: 150px;
+  width: 100vw;
+  height: 100vw;
+  background-image: url('./assets/watermark.svg');
+  background-size: 1800px;
+  opacity: 0.4;
+  background-repeat: repeat;
+  background-position: center;
+  pointer-events: none;
+}

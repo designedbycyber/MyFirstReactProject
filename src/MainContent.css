@@ -1,0 +1,10 @@
+.main-content {
+    display:grid;
+    grid-template-columns: 1fr 2fr 2fr 1fr;
+    gap:40px;
+    padding: 60px 20px;
+}
+
+.content-section {
+    grid-column:2 /span 2;
+}
