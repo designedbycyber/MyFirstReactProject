@@ -7,7 +7,7 @@ import bag5 from "./assets/5.png"
 export const blendsData = [
     {
         id: 1,
-        title: "The House Blend: The Daily Driver",
+        title: "Our House Blend",
         image: bag1,
         roast: "Medium: balanced, smooth and approachable profile",
         beans: "Colombia and Brazil",
