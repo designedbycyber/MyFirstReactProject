@@ -2,7 +2,7 @@ import "./MainContent.css";
 import MenuItem from "./MenuItem";
 import { menuItems } from "./MenuData";
 import BlendCard from "./BlendCard";
-import { blendsData } from "./BlendsData";
+import { blendsData } from "./blendsData";
 
 export default function MainContent() {
     return (
