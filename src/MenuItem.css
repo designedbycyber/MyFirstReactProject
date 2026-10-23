@@ -11,9 +11,6 @@
 
 .menu-name {
     flex-shrink: 0;
-    font-family: "Jost", sans-serif;
-    font-size: 18px;
-    color: #1B2A32;
 }
 
 .menu-dots {
@@ -26,9 +23,6 @@
 .menu-price {
     flex-shrink: 0;
     font-weight: bold;
-    color: #1B2A32;
-    font-size: 18px;
-    font-family: "Jost", sans-serif;
     width: 70px;
     text-align: left;
 }

@@ -7,7 +7,6 @@
     padding-top: 20px;
     padding-bottom: 20px;
     background-color: #F4F1EA;
-    font: Fraunces;
     font-size: 16pt;
     font-weight: 400;
 }
@@ -16,19 +15,11 @@
     align-self: flex-start;
     padding-left: 60px;
     padding-right: 200px;
-}
-
-/*.hero-content h1 {
-    margin-top: 0;
-} 
-*/
-
-.hero-content {
-    flex: 1
+    flex: 1;
 }
 
 .hero-image {
-    flex: 1.5
+    flex: 1.5;
 }
 
 .hero-image img {

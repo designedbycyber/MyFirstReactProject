@@ -1,29 +1,29 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import "./Header.css";
 import logo from "./assets/logo.svg";
 
 function Header() {
+    // we define a constant called activeSection that will contain the name of surrently active section
     const [activeSection, setActiveSection] = useState('story');
 
+
+    // we define which section the scrolling user currently sees, and set it as activeSection
     useEffect(() => {
-        const handleScroll = () => {
-            // 1. Define our virtual trigger line (e.g., 40% down from the top of the viewport)
+        function updateActiveSection () {
             const triggerLine = window.scrollY + (window.innerHeight * 0.4);
             const sections = document.querySelectorAll('section[id]');
 
-            let currentSection = 'story'; // Default fallback
+            let currentSection = 'story';
 
             sections.forEach((section) => {
                 const sectionTop = section.offsetTop;
                 const sectionId = section.getAttribute('id');
 
-                // If the section's top has reached or passed our trigger line
                 if (sectionTop <= triggerLine) {
                     currentSection = sectionId;
                 }
             });
 
-            // 2. Safety net: If user scrolled to the absolute bottom, force 'contacts'
             const isAtBottom = (window.innerHeight + window.scrollY) >= document.documentElement.scrollHeight - 20;
             if (isAtBottom) {
                 currentSection = 'contacts';
@@ -32,11 +32,11 @@ function Header() {
             setActiveSection(currentSection);
         };
 
-        window.addEventListener('scroll', handleScroll);
-        handleScroll(); // Run once on load
+        window.addEventListener('scroll', updateActiveSection);
+        updateActiveSection();
 
         return () => {
-            window.removeEventListener('scroll', handleScroll);
+            window.removeEventListener('scroll', updateActiveSection);
         };
     }, []);
 

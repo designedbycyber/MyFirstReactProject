@@ -58,7 +58,6 @@ export default function MainContent() {
                 </div>
             </section>
 
-
             <section id="blends" className="content-section blends-full-width">
                 <h2>Our Blends</h2>
                 {blendsData.map((blend) => (
