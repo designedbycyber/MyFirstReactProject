@@ -7,6 +7,7 @@
 body {
   margin: 0;
   padding: 0;
+  position: relative;
   overflow-x: hidden;
   background-color: #F4F1EA;
   color: #1B2A32;
@@ -45,14 +46,12 @@ h3 {
 body::before {
   content: '';
   position: absolute;
-  top: 200px;
-  left: 150px;
-  width: 100vw;
-  height: 100vw;
+  width: 100%;
+  height: 100%;
   background-image: url('./assets/watermark.svg');
   background-size: 1800px;
-  opacity: 0.4;
+  opacity: 0.2;
   background-repeat: repeat;
-  background-position: center;
+  background-position: top 200px left 150px;
   pointer-events: none;
 }
