@@ -1,0 +1,41 @@
+.blend-card {
+    grid-column: 1 / 5;
+    display: grid;
+    grid-template-columns: subgrid;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.blend-image {
+    grid-column: 1;
+    margin-left: -20px;      
+    display: flex;
+}
+
+.blend-image img {
+    width: 100%;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+
+.blend-text {
+    grid-column: 2 / 4;
+}
+
+@media (max-width: 768px) {
+    .blend-card {
+        grid-template-columns: 1fr;
+        gap: 16px;
+        margin-bottom: 40px;
+    }
+
+    .blend-image,
+    .blend-text {
+        grid-column: 1;
+    }
+
+    .blend-image {
+        margin-left: -20px;
+        margin-right: 20%;
+    }
+}

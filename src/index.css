@@ -1,7 +1,41 @@
+:root {
+  --bg: #F4F1EA;
+  --text: #1B2A32;
+  --surface: #ffffff;          
+  --accent: #705E77;
+  --accent-hover: #5B4B62;
+  --on-accent: #F4F1EA;
+  --watermark-color: #1B2A32;
+  --watermark-opacity: 0.2;
+  color-scheme: light;
+}
+
+[data-theme="dark"] {
+  --bg: #141C20;
+  --text: #F4F1EA;
+  --surface: #1B2A32;
+  --accent: #705E77;
+  --accent-hover: #7B6784;
+  --on-accent: #F4F1EA;
+  --watermark-color: #F4F1EA;
+  --watermark-opacity: 0.3;
+  color-scheme: dark;          
+}
+
 *,
 *::before,
 *::after {
   box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
 }
 
 body {
@@ -9,11 +43,10 @@ body {
   padding: 0;
   position: relative;
   overflow-x: hidden;
-  background-color: #F4F1EA;
-  color: #1B2A32;
+  background-color: var(--bg);
+  color: var(--text);
   font-family: "Jost", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   font-size: 18px;
-  padding: 0px;
 }
 
 h1,
@@ -28,18 +61,22 @@ h6 {
 }
 
 h2 {
-  text-align: center
+  text-align: center;
 }
 
 h3 {
-  font-family: "Jost";
+  font-family: "Jost", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
 
-.container {
-  width: 100%;
-  max-width: 1920px;
-  margin: 0 auto;
-  padding: 0 20px;
+a {
+  color: inherit;
+}
+
+
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 3px;
 }
 
 
@@ -48,10 +85,16 @@ body::before {
   position: absolute;
   width: 100%;
   height: 100%;
-  background-image: url('./assets/watermark.svg');
-  background-size: 1800px;
-  opacity: 0.2;
-  background-repeat: repeat;
-  background-position: top 200px left 150px;
+  background-color: var(--watermark-color);
+  -webkit-mask-image: url('./assets/watermark.svg');
+  mask-image: url('./assets/watermark.svg');
+  -webkit-mask-size: 1800px;
+  mask-size: 1800px;
+  -webkit-mask-repeat: repeat;
+  mask-repeat: repeat;
+  -webkit-mask-position: top 200px left 150px;
+  mask-position: top 200px left 150px;
+  opacity: var(--watermark-opacity);
   pointer-events: none;
+  z-index: -1;
 }

@@ -1,14 +1,14 @@
-import Header from "./Header";
-import Hero from "./Hero";
-import MainContent from "./MainContent";
+import Header from "./components/Header/Header";
+import Hero from "./components/Hero/Hero";
+import MainContent from "./components/MainContent";
 
 function App() {
   return (
-    <div>
+    <>
       <Header />
       <Hero />
       <MainContent />
-    </div>
+    </>
   );
 }
 export default App;

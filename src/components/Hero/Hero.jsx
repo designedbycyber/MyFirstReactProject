@@ -1,6 +1,5 @@
 import "./Hero.css";
-import heroImg from "./assets/hero.jpeg"
-
+import heroImg from "../../assets/hero.jpeg";
 
 function Hero() {
     return (
@@ -10,9 +9,11 @@ function Hero() {
                 <p>Coffee crafted with care. Stop by our van for your morning energy spark and a warm smile</p>
             </div>
             <div className="hero-image">
-                <img src={heroImg} />
+                <img
+                    src={heroImg}
+                    alt="Espresso bar with a snowy mountain backdrop"
+                />
             </div>
-
         </section>
     );
 }

@@ -6,7 +6,7 @@
     gap: 15px;
     padding-top: 20px;
     padding-bottom: 20px;
-    background-color: #F4F1EA;
+
     font-size: 16pt;
     font-weight: 400;
 }
@@ -28,4 +28,31 @@
     display: block;
     border-top-left-radius: 30px;
     border-bottom-left-radius: 30px;
+}
+
+@media (max-width: 1100px) {
+    .hero-content {
+        padding-right: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-section {
+        flex-direction: column;
+        align-items: stretch;
+        font-size: 14pt;
+    }
+
+    .hero-content {
+        flex: none;
+        padding: 0 20px;
+    }
+
+    .hero-image {
+        flex: none;
+    }
+
+    .hero-image img {
+        border-radius: 0;
+    }
 }
