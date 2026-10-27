@@ -1,7 +1,7 @@
 :root {
   --bg: #F4F1EA;
   --text: #1B2A32;
-  --surface: #ffffff;          
+  --surface: #ffffff;
   --accent: #705E77;
   --accent-hover: #5B4B62;
   --on-accent: #F4F1EA;
@@ -19,7 +19,7 @@
   --on-accent: #F4F1EA;
   --watermark-color: #F4F1EA;
   --watermark-opacity: 0.3;
-  color-scheme: dark;          
+  color-scheme: dark;
 }
 
 *,
@@ -97,4 +97,12 @@ body::before {
   opacity: var(--watermark-opacity);
   pointer-events: none;
   z-index: -1;
+
+  @media (max-width: 768px) {
+    -webkit-mask-size: 1300px;
+    mask-size: 1300px;
+    -webkit-mask-position: top 80px left 0;
+    mask-position: top 80px left 0;
+
+  }
 }
