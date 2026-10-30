@@ -3,7 +3,7 @@ import "./Delivery.css";
 
 function Delivery() {
     const [submitted, setSubmitted] = useState(false);
-    const [inquirySubject, setInquirySubject] = useState("Event Catering Inquiry");
+    const [inquirySubject, setInquirySubject] = useState("Book a Coffee Van");
 
     const handleSubmit = async (e) => { // 👈 Added async here
         e.preventDefault();
@@ -131,13 +131,13 @@ function Delivery() {
                             value={inquirySubject}
                             onChange={(e) => setInquirySubject(e.target.value)}
                         >
-                            <option value="Event Catering Inquiry">Event Catering Inquiry</option>
-                            <option value="Bulk Bean / Bag Reservation">Bulk Coffee Beans / Bag Reservation</option>
+                            <option value="Book a Coffee Van">Book a Coffee Van</option>
+                            <option value="Bag Reservation">Bag Reservation</option>
                         </select>
                     </div>
 
                     {/* CONDITIONAL FIELDS FOR CATERING */}
-                    {inquirySubject === "Event Catering Inquiry" && (
+                    {inquirySubject === "Book a Coffee Van" && (
                         <>
                             <div className="form-group">
                                 <label htmlFor="eventDate">Event Date *</label>
@@ -157,7 +157,7 @@ function Delivery() {
                     )}
 
                     {/* CONDITIONAL FIELDS FOR BULK BEANS */}
-                    {inquirySubject === "Bulk Bean / Bag Reservation" && (
+                    {inquirySubject === "Bag Reservation" && (
                         <div className="form-group">
                             <label htmlFor="beanDetails">Coffee Selection & Quantity *</label>
                             <textarea
@@ -190,3 +190,4 @@ function Delivery() {
 }
 
 export default Delivery;
+
