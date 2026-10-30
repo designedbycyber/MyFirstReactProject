@@ -5,17 +5,36 @@ function Delivery() {
     const [submitted, setSubmitted] = useState(false);
     const [inquirySubject, setInquirySubject] = useState("Event Catering Inquiry");
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => { // 👈 Added async here
         e.preventDefault();
         const formData = new FormData(e.target);
         const userInput = Object.fromEntries(formData);
         console.log("Submitted Data:", userInput);
 
-        setSubmitted("Thank you! Your message has been sent. We'll get back to you shortly.");
-        e.target.reset();
-        setTimeout(() => {
-            setSubmitted(false);
-        }, 10000);
+        try {
+            const response = await fetch("/api/inquiry", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(userInput),
+            });
+
+            if (response.ok) {
+                setSubmitted("Thank you! Your inquiry has been sent. We'll get back to you shortly.");
+                e.target.reset();
+
+                // Auto-dismiss confirmation after 20 seconds
+                setTimeout(() => {
+                    setSubmitted(false);
+                }, 20000);
+            } else {
+                setSubmitted("Oops! Something went wrong sending your inquiry. Please try again.");
+            }
+        } catch (error) {
+            console.error("Submission error:", error);
+            setSubmitted("Server error. Please check your network connection and try again.");
+        }
     };
 
     return (
