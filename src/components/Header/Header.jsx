@@ -10,7 +10,7 @@ function Header() {
     const { theme, toggleTheme } = useTheme();
 
     // id of the section we are currently looking at
-    const [activeSection, setActiveSection] = useState('story');
+    const [activeSection, setActiveSection] = useState('intro');
 
     useEffect(() => {
         function handleScroll() {
@@ -19,7 +19,7 @@ function Header() {
             const sections = document.querySelectorAll("section[id]");
 
             // find current section
-            let currentSection = 'story';
+            let currentSection = 'intro';
             sections.forEach((section) => {
                 const sectionTop = section.offsetTop;
                 const sectionId = section.getAttribute('id');
@@ -50,11 +50,13 @@ function Header() {
 
     return (
         <header className="site-header">
-            <img
-                src={theme === "dark" ? logoDark : logoLight}
-                className="logo"
-                alt="Blendwagen logo"
-            />
+            <a href="#">
+                <img
+                    src={theme === "dark" ? logoDark : logoLight}
+                    className="logo"
+                    alt="Blendwagen logo"
+                />
+            </a>
 
             <nav className="navigation">
                 <a href="#story" className={activeSection === 'story' ? 'active' : ''}>Our Story</a>
