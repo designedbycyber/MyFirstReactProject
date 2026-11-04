@@ -47,7 +47,7 @@ function Delivery() {
                     Want to power up your next event with specialty coffee on wheels? Whether it’s a corporate gathering, private party, wedding, or local festival, Blendwagen brings our fully equipped mobile espresso bar directly to your location in and around The Hague.
                 </p>
                 <p>
-                    We bring the specialty beans, expert baristas, and warm vibes—all you need to do is tell us where to park!
+                    We bring the specialty beans, expert baristas, and warm vibes. All you need to do is tell us where to park!
                 </p>
             </div>
 
