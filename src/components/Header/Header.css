@@ -14,6 +14,9 @@
 .logo {
     height: 80px;
     width: auto;
+    user-select: none;
+    -webkit-user-select: none;
+    pointer-events: bounding-box;
 }
 
 .navigation {
