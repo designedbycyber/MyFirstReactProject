@@ -2,6 +2,13 @@
 
 Single-page React landing page for Blendwagen, built using React and Vite framework
 
+## Tech Stack
+- **Frontend Framework:** React
+- **Build Tool & Dev Environment:** Vite
+- **Styling:** CSS
+- **Backend:** Vercel API to Resend email service
+- **Deployment:** Vercel
+
 ## Live Demo
 Live fully functional demo page is built on Vercel production server at the following address:
 - **URL:** [https://blendwagen.vercel.app/](https://blendwagen.vercel.app/)
